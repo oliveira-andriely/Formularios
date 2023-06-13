@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Treino forms</title>
+        <link rel="stylesheet" href="../formularios/treino-form.css"/>
+    </head>
+<body>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREWx4TnWOSKvRQ1j2cCB5HAqufHzQC11qL0A&usqp=CAU">
+<h1>Formulario Teste</h1>
+<h2>Dados pessoais</h2>
+<form id="dados" action="javascript:alert('Enviado com sucesso!')" method="get">
+<table>
+    <tr>
+    <!-- nome -->
+  <td><label for="primeiro-nome">Nome:</label><td>
+  <td><input type="text" id="nome" name="primeiro-nome" placeholder="insira seu nome" ><br><td>
+  </tr>
+    <tr>
+   <!-- sobrenome -->
+  <td><label for="sobrenome">Sobrenome:</label></td>
+  <td><input type="text" id="sobrenome" name="sobrenome" placeholder="insira seu sobrenome"><br></td>
+  </tr>
+  <tr>
+   <!-- email -->
+  <td><label for="email">Email:</label></td>
+  <td><input type="email" id="email" name="email" placeholder="insira seu email" inputmode="email"><br></td>
+  </tr>
+  <tr>
+   <!-- telefone -->
+  <label for="telefone">Telefone:</label>
+  <input type="tel" id="telefone" name="telefone" placeholder="insira seu telefone" inputmode="tel"><br>
+  </tr>
+  <!--data de nascimento-->
+  <label for="data">Data de Nascimento:</label>
+  <input type="date" id="data" name="data" inputmode="numeric"/><br>
+
+  <label for="cor">Escolha uma cor</label>
+  <input type="color" name="cor" id="cor">
+
+  <!--botoes-->
+  <input type="submit" name="enviar" id="enviar" value="enviar"/><br>
+  <input type="reset" name="redefinir" id="redefinir" value="redefinir"/>
+</table>
+  
+
+
+   
+
+</form> 
+
+
+    
+
+
+</body>
+</html>
