@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture | DK</title>
+    <style>
+        :root{
+            --color-green1: #22bdb5;
+            --color-green2: #0b6460;
+            --color-green3: #178f85;
+            --color-green4: #368884;
+            --color-dark: #000000;
+            --color-white: #ffffff;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        img{
+            width: 45px;
+            border-radius: 8px;
+            height: 45px;
+            margin-top: 15px;
+            padding: 2px;
+        }
+
+        .header{
+            display: flex;
+            background-color: var(--color-green2);
+            border-radius: 5px;
+            text-transform: capitalize;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-shadow: 1px 4px 4px var(--color-dark); 
+            height: 75px;
+            justify-content: space-between;
+            padding: 5px;
+            align-items: center;
+        }
+
+        body{
+            background-color: var(--color-green1);
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .options{
+            background-color: var(--color-green4);
+            height: 30px;
+            justify-content: flex-end;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: var(--color-white);
+        }
+
+        .options:hover {
+            cursor: pointer;
+            transition: .8s;
+            color: var(--color-dark);
+            background-color: var(--color-green1);
+        }
+        
+        a{
+            text-decoration: none;
+            outline: none;
+        }
+
+        .content{
+            display: flex;
+            font-size: 18px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: var(--color-green3);
+            width: 300px;
+            height: 80vh;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        #container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120vh;
+        }
+                
+
+        .content, form{  
+            gap: 1rem;
+            display: flex; 
+            align-items: center;    
+            justify-content: center;
+        }
+
+        .inputs{
+            background-color: var(--color-white);
+            border:none;
+            outline: none;
+            padding: 10px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            border-color: var(--color-dark);
+        }
+
+        .inputs:hover{
+            cursor: pointer;
+            transition: .1s;
+            border: 2px solid;
+            color: var(--color-dark);
+        }
+
+        h2{ 
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .seleçao{
+            box-sizing: border-box;
+        }
+
+        button{
+            padding: 15px;
+            border-radius: 8px;
+            border: none;
+            font-size: 18px;
+            font-family: Georgia, 'Times New Roman', Times, serif; 
+            background-color: var(--color-green1);
+        }
+
+        button:hover{
+            cursor: pointer;
+            background-color: var(--color-green2);
+            border: 3px solid;
+            transition: .3s;
+            
+        }
+
+        
+
+        
+            
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEUAAAD///81NTXs7OxsbGyRkZFmZmaNjY3Dw8MTExMxMTHo6Ojj4+P29vb5+fmcnJxYWFjU1NTa2trLy8s7OztRUVFwcHAqKiqmpqZkZGRCQkKurq6CgoJISEgiIiJ4eHgaGhqXl5e3t7eqqqoLCwuGhoa+vr4lJSVVVVVSdl72AAAEVklEQVR4nO3ce7tiQADHcZUuIsUkOpFL6ez7f4WLGWK0R8dqXJ7f54/z1JMp301tQ5IkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGJLVbtHEJHv5yo+LuXEGv4BavX23EtNTJ8/eopNDddySW0Dj71jnFpBFFfHeLEwQuzxuioWz2ak0bpqFM/c5bqKFs+eLcaqFu2LcVAtnTj5usoW6wsY1Fd75kWMpLN5smgq/RltI2LimQn+0hfl7TVOhNtrC2ZGOqxcqBdta1wJHVHh+XfjuuBEUui0L/4ymcN2y8Gsohfr+yYnqL6e2hbufV0NgIbcmX7uOCk3xaUytUKne7nZUGIpPY5oKa5++Whb29jJsLJT4zbRdYW03jjiNhWonhZbwsIKYwovwrichhbXJo0giCrVAdFWZgMKN8KiKjxcufOFNVW0Lw7fydNJ3X/vCE9k0eDjxIRCd80LbwvFAIQqHD4UoHL62hUd51eBgbYXXvPLRzzSLjRuIDqr59OdS/RKITuLU9iZ2PrfQe/5oela1CvMD88Ob8Kpf6WKOP+zETvbTuD8/Rr86KdRr3xobkG72Jva5s61JN4VDfhIXnRQO+JV45Ve1ZSH5+WE+SJlv/21u+bUjiC0LF70Vnn65pq2PAff2MfzXR7njloW9HZv5deGpZeHh5/UYUKH3unARLwvhzayPG833aXT7dSF3eOnPeAvzbxw0fesrHG3hno1rKvRGW5h/46CpMBhrYfHRZLLfET7m46ZauC/GTbSwdLx6moWP0rhJFlb250+vUL9UdzOOp/Cd2dPOjE78uJBbRuUX4O+kdg+iKMd5g63N7yROXfml+AX4u3l1JwAAAMNUOSPdvpeuKN+CV6UrVvS8fI9MYsb5NTm5sskPqFyJQUz+5KxLOpmaFxOO+Dk9zvbmXHd0D+JRNRK9Hes+lA4okGX6hx1DOafHu918x5O2Sp5Sjdvn+dhZyfoXJxoYBtvTKO3TG6RQp/8kXo+nIkiVQnoxYEcYzGx1IzqpX2dnOFvcqm58tVR4juR8e3Cc9JIZ0d/CGE6hQ6dH5jz9G1QmCyQ7t+7OfbzeeGH0LCSelN/u+FpaHNH5hKedZfnU2wHEciF9CRrZ7jQ72T4901Dphkbo9scXHiRzNWeFinm/R2wLd06On4x5sEJ1GYZ7W+pJqdClh6LZVkpPIbjRlbxkq/7NTQKTwvliywqXGiEGu+z4thGYUl44mK1UUYPkr8veG2/ZXif2szJe1nbhTkBLCqXYYHeQPb8anUQlz6DhLIdSuNg7zo1uQgc19KPiREGy8dfGhb3Jx1rsE/7Eiew3awz6xK6y0CV9r0mecnemSBs66/XSh3B6m+Nf5VMioFfu7rL0U0CHtats85mtHa9rZ/Ja6btHQP8L+crenxR2ZSspydIW/YcLsofw+NEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8H/+AmVmRmWeRGFvAAAAAElFTkSuQmCC" alt="imagewm da logo">
+        <H1>Dado'Kenedy</H1>
+        <a href="#"  class="options">Inicio</a>
+        <a href="#"  class="options">Sobre nos</a>
+        <a href="#"  class="options">contato</a>
+        <a href="#"  class="options">Login</a>
+    </div>
+    <div id="container">
+    <form>
+    <div class="content">
+        <h2>receber a planilha no seu email</h2>
+        <h6>Preencha seus dados</h6>
+        <div>nome<br>
+        <input type="text"  class="inputs" name="nome" id="nome" placeholder="Digite seu nome" required>
+        </div>
+        <div>
+            email<br>
+            <input type="email"  class="inputs" name="email" id="email" placeholder="Digite seu email" required>
+        </div>
+        <div  class="seleçao">
+            <p>Sua empresa é?</p>
+            <select name="empresa" id="empresa" >
+                <option value="#" selected>Selecione</option>
+                <option value="MEI">MEI</option>
+                <option value="-Empresário-Individual">Individual</option>
+                <option value="Sociedade-Limitada-Unipessoal">Unipessoal</option>
+                <option value="Sociedade-Empresária-Limitada">Limitada</option>
+                <option value="Anonima">Anonima</option>
+                <option value="simples">Simples</option>
+            </select>
+        </div>
+        <div   class="seleçao">
+            <p>Quantas pessoas tem na sua empresa?</p>
+            <select type="numeric"  name="numeric" id="numeric" class="seleçao">
+                <option value="#" selected>Selecione</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="+10">+10</option>
+            </select>
+
+        </div>
+        <div  class="seleçao">
+            <p>Onde voce usará a planilha?</p>
+            <select  name="planilha" id="planilha" class="seleçao">
+                <option value="#" selected>Selecione</option>
+                <option value="listas">listas</option>
+                <option value="acompanhamento-de-tarefas">tarefas</option>
+                <option value=" controle-de-gastos"> controle de gastos</option>
+                <option value="gerenciar-aulas">gerenciar aulas</option>
+                <option value="despesas-familiares">despesas familiares</option>
+                <option value="Gráfico-de-Gantt">Gráfico de Gantt</option>
+            </select>
+        </div>
+        <div  class="box">
+            <p>Voce ja tem uma empresa formada?</p>
+            <div> <input type="radio" name="s" id="s" value="s" class="inputs">
+                <label for="s">Sim</label>
+            </div>
+            <div><input type="radio" name="n" id="n" value="n" class="inputs">
+                <label for="n">Nao</label>
+            </div>
+            <div><input type="radio" name="e" id="e" value="e" class="inputs">
+                <label for="e">Estou abrindo uma</label>
+            </div>
+            <div><input type="radio" name="Nao" id="Nao" value="Nao" class="inputs">
+                <label for="Nao">Nao possuo empresa</label>
+            </div>
+        </div>
+            <button type="submit">Receber planilha</button> 
+
+    </div>
+    </form>
+    </div>
+</body>
+</html>
