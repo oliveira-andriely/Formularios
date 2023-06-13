@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contato</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        
+    </head>
+    <body>
+        <div id="container">
+            <h1>Contato</h1>
+
+            <form name="formulario-de-contato">
+                <fieldset >
+                    <legend>Dados pessoais: </legend>
+                    <table>
+                        <tr>
+                            <!-- Input text: Nome do vivente -->
+                            <td><label for="first_name">Teu nome:</label></td>
+                            <td><input type="text" name="first_name" id="first_name" placeholder="Insira aqui teu nome" required/></td>
+                        </tr>
+                        <tr>
+                            <!-- Input text: Sobrenome do vivente -->
+                            <td><label for="last_name">Teu sobrme:</label></td>
+                            <td><input type="text" name="last_name" id="last_name" placeholder="Insira aqui teu sobrenome" required/></td>
+                        </tr>
+                        <tr>
+                            <!-- Input mail: E-mail do vivente -->
+                            <td><label for="email">Teu e-mail:</label></td>
+                            <td><input type="email" name="email" id="email" placeholder="Insira aqui teu e-mail"/></td>
+                        </tr>
+                        <tr>
+                            <!-- Input tel: Telefone do vivente -->
+                            <td><label for="telefone">Teu telefone:</label></td>
+                            <td><input type="tel" pattern=".{8,}" name="telefone" id="telefone" placeholder="Insira aqui teu teleone"/></td>
+                        </tr>
+                    
+                            <!-- Input pass: Crie uma senha -->
+                            <tr>
+                            <td><label for="password">Tua senha:</label></td>
+                            <td><input  class="input" name="senha" type="password" placeholder="Digite a senha" value="">
+                            
+                            </tr>                                                                  
+                         </table>
+
+                
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Seleções das minhas preferências:</legend>
+                    <!-- Radiobox: Yout favorite language -->
+                    <h2>Escolha tua linguagem de programação favorita:</h2>
+                    <input type="radio" id="html" name="linguagem-favorita" value="HTML" required/>
+                    <label for="html">HTML</label><br/>
+                    <input type="radio" id="css" name="linguagem-favorita" value="CSS" required/>
+                    <label for="css">CSS</label><br/>
+                    <input type="radio" id="js" name="linguagem-favorita" value="JS"  />
+                    <label for="js">JavaScript</label>
+
+                    <!-- Checkbox: o que já aprendemos? -->
+                    <h2>O que já aprendemos?</h2>
+                    <input type="checkbox" id="conhecimento1" name="imagens" value="imagens"/>
+                    <label for="conhecimento1">Imagens, links e formatação de texto</label><br/>
+                    <input type="checkbox" id="conhecimento2" name="dropdown-menu" value="dropdown-menu"/>
+                    <label for="conhecimento2">Dropdown menu</label><br/>
+                    <input type="checkbox" id="conhecimento3" name="formularios" value="formularios" />
+                    <label for="conhecimento3">Formulários</label><br/>
+
+                    <!-- Select: estado -->
+                    <p>
+                        <select name="estado" id="estado">
+                            <option value="#" selected>Estado</option>
+                            <option value="Rio-grande-do-sul">RS</option>
+                            <option value="Sao-paulo">SP</option>
+                            <option value="Santa-catarina">SC</option>
+                            <option value="Acre">AC</option>
+                            <option value="RIO-GRANDE-DO-NORTE">RN</option>
+                            <option value="Roraima">Roraima</option>                   
+                        </select>
+                    </p>
+
+                    <!-- Select color -->
+                    <p>
+                        <label for="color" >Selecione tua cor favorita:</label>
+                        <input type="color" id="color" name="color"/>
+                    </p>
+
+                    <!-- Select date-->
+                    <p>
+                        <label for="aniverssauro">Data do teu Aniverssauro:</label>
+                        <input type="date" id="aniverssauro" name="aniverssauro"/>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Outras Observações:</legend>
+                    <!-- Textarea: Observações -->
+                    <textarea name="obs" placeholder="Deixe uma mensagem legal aqui" rows="4" cols="50" required></textarea>
+
+                    <!-- Arquivos -->
+                    <p>
+                        <label for="arquivo">Escolha uma foto tua:</label>
+                        <input type="file" id="arquivo" name="arquivo"/>
+                    </p>
+
+                    <!-- Contador -->
+                    <p>
+                        <label for="nota">Que nota tu daria para esta aula?</label>
+                        <input type="number" id="nota" name="nota" max="10" min="0" step="0.5" value="0"/>
+                    </p>
+                </fieldset>
+
+                <input type="submit" value="Enviar contato">
+                <input type="reset">
+            </form>
+        </div>
+    </body>
+</html>
