@@ -1,0 +1,37 @@
+h1 {font-size: 45px;
+    color: rgb(50, 66, 116);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 10px;
+    background-image: linear-gradient( to right, rgb(255, 255, 255), rgb(146, 134, 255), rgb(76, 82, 161), rgb(25, 21, 70) );
+    width: 800px;
+}
+
+body{ font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+h2{
+    font-size: 30px;
+    text-transform: capitalize;
+    margin: 5px;
+    color: cornflowerblue;
+}
+ 
+img{float: left;
+width: 50px;
+margin: 5px;}
+
+#dados {
+   margin: 15px;
+}
+
+input, label{margin: 0px 10px ;
+padding: 5px 5px 5px 5px;
+border: 5px 5px;
+border-color: black;}
+
+#telefone,#email,#nome,#sobrenome,#data{
+    color: blue;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+}
+
